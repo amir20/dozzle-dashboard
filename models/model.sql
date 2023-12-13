@@ -1,0 +1,1 @@
+ SELECT DISTINCT on(userID,  date_trunc('day', CreatedAt))  date_trunc('day', CreatedAt) as CreatedAt, "Version", Clients, HasCustomAddress, HasHostname, RunningContainers, HasDocumentation, HasActions  from events_anonymized where name = 'events' ORDER by userID, CreatedAt desc
